@@ -1,0 +1,10 @@
+[Unit]
+Requires=tor-socket.service
+After=tor-socket.service
+Requires=tor-proxy.socket
+After=tor-proxy.socket
+
+[Service]
+ExecStart=/usr/lib/systemd/systemd-socket-proxyd --exit-idle-time=1min /run/tor/socket
+PrivateTmp=yes
+PrivateNetwork=yes
