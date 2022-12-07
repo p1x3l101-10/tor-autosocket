@@ -1,7 +1,7 @@
 [Socket]
 Accept=false
 ListenStream=9050
-Service=tor-proxy.service
+Service=tor-autosocket.service
 
 [Install]
 WantedBy=sockets.target
